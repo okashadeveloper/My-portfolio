@@ -1,0 +1,61 @@
+
+```html
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Blog — Okasha Ahmed</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <canvas class="canvas-bg" id="stars"></canvas>
+  <div class="wipe" id="wipe"></div>
+
+  <nav class="nav">
+    <div class="nav__wrap">
+       <a href="profile.html" class="logo"> 
+          <span class="logo__round"><span class="logo__dot"></span></span>
+          Okasha <span style="color:var(--cyan)"> .dev</span>
+       </a>
+
+      <div class="nav__links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="skills.html">Skills</a>
+        <a href="projects.html">Projects</a>
+        <a href="blog.html" class="active">Blog</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <button class="burger" id="burger">☰</button>
+    </div>
+  </nav>
+
+  <main>
+    <section class="section container">
+      <div class="center">
+        <h2 class="reveal">Blog</h2>
+        <p class="reveal delay-1" style="color:var(--muted)">Thoughts on development, design and workflow.</p>
+      </div>
+
+      <div class="grid posts mt-2">
+        <article class="card reveal">
+          <h3 class="m-0">Designing with Dev in Mind</h3>
+          <p class="mt-2" style="color:var(--muted)">Bridging UX and engineering with tokens, systems and ergonomics.</p>
+          <a class="btn mt-2" href="blog-post-1.html">Read More</a>
+        </article>
+
+        <article class="card reveal delay-1">
+          <h3 class="m-0">Performance First</h3>
+          <p class="mt-2" style="color:var(--muted)">Budgets, lazy loading, measuring what matters, and UX speed.</p>
+          <a class="btn mt-2" href="blog-post-2.html">Read More</a>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer>© 2025 Okasha Ahmed — All rights reserved.</footer>
+  <script src="./script.js"></script>
+</body>
+</html>
+```

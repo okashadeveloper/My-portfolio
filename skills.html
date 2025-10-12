@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Skills — Okasha Ahmed</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <canvas class="canvas-bg" id="stars"></canvas>
+  <div class="wipe" id="wipe"></div>
+
+  <nav class="nav">
+    <div class="nav__wrap">
+       <a href="profile.html" class="logo"> 
+          <span class="logo__round"><span class="logo__dot"></span></span>
+          Okasha <span style="color:var(--cyan)"> .dev</span>
+       </a>
+
+      <div class="nav__links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="skills.html" class="active">Skills</a>
+        <a href="projects.html">Projects</a>
+        <a href="blog.html">Blog</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <button class="burger" id="burger">☰</button>
+    </div>
+  </nav>
+
+  <main>
+    <section class="section container" id="skills">
+      <h2 class="reveal">⚡ Skills</h2>
+      <p class="reveal delay-1" style="color:var(--muted)">A quick overview of the tools and technologies I work with — creating clean designs, smooth experiences, and efficient code.</p>
+
+      <div class="grid skills mt-2">
+        <div class="card skill reveal"><b>🧱 HTML</b>
+          <div class="meter"><span data-val="95"></span></div>
+          <p class="mt-2" style="color:var(--muted)">Semantic markup, accessibility (aria), SEO-friendly structure, microformats.</p>
+        </div>
+
+        <div class="card skill reveal delay-1"><b>🎨 CSS</b>
+          <div class="meter"><span data-val="92"></span></div>
+          <p class="mt-2" style="color:var(--muted)">Responsive layouts, CSS variables, component-based architecture, animations.</p>
+        </div>
+
+        <div class="card skill reveal delay-2"><b>⚡ JavaScript</b>
+          <div class="meter"><span data-val="90"></span></div>
+          <p class="mt-2" style="color:var(--muted)">DOM manipulation, async patterns, modular code, fetch and XHR handling.</p>
+        </div>
+
+        <div class="card skill reveal delay-3"><b> 🧩Bootstrap & Tailwind</b>
+          <div class="meter"><span data-val="86"></span></div>
+          <p class="mt-2" style="color:var(--muted)">Fast and efficient styling using modern frameworks. Creating clean, mobile-first designs with reusable components.</p>
+        </div>
+
+        <div class="card skill reveal"><b>Node / Express</b>
+          <div class="meter"><span data-val="84"></span></div>
+          <p class="mt-2" style="color:var(--muted)">REST APIs, middleware, authentication and small server-side apps.</p>
+        </div>
+
+        <div class="card skill reveal delay-1"><b>MongoDB</b>
+          <div class="meter"><span data-val="80"></span></div>
+          <p class="mt-2" style="color:var(--muted)">Schema design, aggregation basics, and simple replication awareness.</p>
+        </div>
+
+        <div class="card skill reveal delay-2"><b> 🔧 Git & GitHub</b>
+          <div class="meter"><span data-val="88"></span></div>
+          <p class="mt-2" style="color:var(--muted)">Version control for clean project management — branching, commits, and collaboration with organized workflows.</p>
+        </div>
+
+        <div class="card skill reveal delay-3"><b>Figma</b>
+          <div class="meter"><span data-val="85"></span></div>
+          <p class="mt-2" style="color:var(--muted)">Design systems, prototyping and handing off assets to developers.</p>
+        </div>
+      </div>
+
+    </section>
+  </main>
+  <footer>© 2025 Okasha Ahmed — All rights reserved.</footer>
+  <script src="./script.js"></script>
+</body>
+</html>

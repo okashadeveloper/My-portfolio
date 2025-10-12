@@ -1,0 +1,66 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Contact — Okasha Ahmed</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <canvas class="canvas-bg" id="stars"></canvas>
+  <div class="wipe" id="wipe"></div>
+
+  <nav class="nav">
+    <div class="nav__wrap">
+       <a href="profile.html" class="logo"> 
+          <span class="logo__round"><span class="logo__dot"></span></span>
+          Okasha <span style="color:var(--cyan)"> .dev</span>
+       </a>
+
+      <div class="nav__links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="skills.html">Skills</a>
+        <a href="projects.html">Projects</a>
+        <a href="blog.html">Blog</a>
+        <a href="contact.html" class="active">Contact</a>
+      </div>
+      <button class="burger" id="burger">☰</button>
+    </div>
+  </nav>
+
+  <main>
+    <section class="section container" id="contact">
+      <div class="contact__grid">
+        <div>
+          <h2 class="reveal">Let’s build something</h2>
+          <p class="reveal delay-1" style="color:var(--muted)">Have an idea or opportunity? I’m open for collaborations and internships.</p>
+
+          <div class="card reveal delay-2">
+            <h3 class="m-0">Reach me at</h3>
+            <p class="mt-2"><a class="btn" href="mailto:okashaahmedofficial@gmail.com">okashaahmedofficial@gmail.com</a></p>
+            <p class="mt-2" style="color:var(--muted)">
+              <a class="tag" href="https://github.com/okashadeveloper" target="_blank" title="GitHub">GitHub</a>
+              <a class="tag" href="https://www.linkedin.com/in/okasha-ahmed-066380366/" target="_blank" title="LinkedIn">LinkedIn</a>
+            </p>
+          </div>
+        </div>
+
+        <form class="card reveal delay-1" onsubmit="event.preventDefault(); alert('Thanks, I will get back to you!');">
+          <h3 class="m-0">Quick message</h3>
+          <div class="grid" style="grid-template-columns:1fr 1fr;gap:12px;margin-top:12px">
+            <input required placeholder="Name" class="input">
+            <input required placeholder="Email" type="email" class="input">
+          </div>
+          <textarea required placeholder="Message" class="textarea" style="margin-top:12px"></textarea>
+          <button class="btn mt-2" type="submit">Send Message</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer>© 2025 Okasha Ahmed — All rights reserved.</footer>
+  <script src="./script.js"></script>
+</body>
+</html>

@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Okasha Ahmed — Full Stack Developer</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+
+<body>
+
+  <!-- Background particles -->
+  <canvas class="canvas-bg" id="stars"></canvas>
+
+  <!-- Page wipe element-->
+  <div class="wipe" id="wipe"></div>
+
+  <!-- NAV -->
+  <nav class="nav">
+    <div class="nav__wrap">
+      <a href="./profile.html" class="logo">
+        <span class="logo__round"><span class="logo__dot"></span></span>
+        Okasha <span style="color:var(--cyan)">.dev</span>
+      </a>
+
+      <div class="nav__links" id="menu">
+        <a href="./index.html" data-route="home" class="active">Home</a>
+        <a href="./about.html" data-route="about">About</a>
+        <a href="./skills.html" data-route="skills">Skills</a>
+        <a href="./projects.html" data-route="projects">Projects</a>
+        <a href="./blog.html" data-route="blog">Blog</a>
+        <a href="./contact.html" data-route="contact">Contact</a>
+      </div>
+      <button class="burger" id="burger">☰</button>
+    </div>
+  </nav>
+
+  <main>
+
+    <!-- ========== HOME / HERO ========= -->
+    <section class="hero section container" id="home">
+      <div class="hero__wrap">
+        <div>
+          <div class="badge reveal">🚀 Full Stack Developer</div>
+          <h1 class="reveal delay-1">Crafting Code with
+            <span style="background:linear-gradient(90deg,var(--cyan),var(--violet));
+          -webkit-background-clip:text;background-clip:text;color:transparent;">
+              Creativity</span>
+          </h1>
+          <p class="reveal delay-2">I’m <b>Okasha Ahmed</b> — trained at <b>SMIT</b>, currently at <b>PECHS College</b>.
+            I build fast, beautiful, scalable web apps with modern stacks and lots of polish.</p>
+          <div class="hero__cta reveal delay-3">
+            <a href="./projects.html" class="btn" id="viewBtn">View Work</a>
+            <a href="./contact.html" class="btn btn--outline">Contact</a>
+          </div>
+        </div>
+
+        <div class="hero__panel reveal delay-2">
+          <div class="avatar">
+            <img class="avatar__img" src="./okasha.png" alt="Okasha Portrait">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== WHAT I DO ========= -->
+    <section class="section">
+      <div class="container center">
+        <h2 class="reveal"> 💻What I Do</h2>
+        <p class="reveal delay-1" style="color:var(--muted)">
+          I build modern and responsive websites using HTML, CSS, and JavaScript, focusing on clean design and smooth
+          user experience. I’m also learning backend development to create complete, full-stack web applications.
+        </p>
+        <div class="grid what-grid" style="margin-top:26px">
+          <article class="card reveal">
+            <div class="icon">🌐</div>
+            <h3>Web Design</h3>
+            <p class="mt-2" style="color:var(--muted)">I make responsive and attractive web designs using HTML, CSS, JS.
+            </p>
+          </article>
+          <article class="card reveal delay-1">
+            <div class="icon">⚡</div>
+            <h3>Frontend Dev</h3>
+            <p class="mt-2" style="color:var(--muted)">Building interactive UI with animations and smooth user
+              experience.</p>
+          </article>
+          <article class="card reveal delay-2">
+            <div class="icon">🚀</div>
+            <h3>Learning</h3>
+            <p class="mt-2" style="color:var(--muted)">Always exploring new technologies to improve my skills.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== ABOUT ========= -->
+    <section class="section container" id="about">
+      <h2 class="reveal">About Me</h2>
+      <p class="reveal delay-1" style="color:var(--muted);max-width:900px">
+        Karachi-based full stack developer. Strong love for UI polish + backend pragmatism.
+        SMIT grad-in-training; PECHS College student. I ship fast and iterate with users.
+      </p>
+
+      <div class="grid about-grid" style="margin-top:22px">
+        <div class="card reveal">
+          <h3 class="m-0">Principles</h3>
+          <ul style="margin:10px 0 0;padding-left:18px;color:var(--muted)">
+            <li>I focus on clean, responsive, and fast websites.</li>
+            <li>I write neat and organized code for easy updates.</li>
+            <li>I believe in learning and improving with every project.</li>
+            <li>I test my work carefully before making it live.</li>
+          </ul>
+          <a href="./about.html" class="btn mt-2" style="margin-top: 20px;">More →</a>
+        </div>
+        <div class="card reveal delay-1">
+          <h3 class="m-0">Quick Facts</h3>
+          <p class="mt-2" style="color:var(--muted)">I’m from Karachi, Pakistan. I love creating smooth animations and
+            making user-friendly designs that feel alive. I enjoy solving problems with creativity and writing clean,
+            easy-to-understand code. I also focus on writing helpful documentation to make projects easier to use and
+            share.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== SKILLS ========= -->
+    <section class="section container" id="skills">
+      <h2 class="reveal">Skills</h2>
+      <p class="reveal delay-1" style="color:var(--muted)">Skilled in both frontend and backend development, with a
+        focus on building complete, user-centered web experiences.</p>
+
+      <div class="grid skills mt-2">
+        <div class="card skill reveal"><b>HTML</b>
+          <div class="meter"><span data-val="95"></span></div>
+          <p style="color:var(--muted)">Expert in semantic markup, structure, and accessibility.</p>
+        </div>
+        <div class="card skill reveal delay-1"><b>CSS</b>
+          <div class="meter"><span data-val="92"></span></div>
+          <p style="color:var(--muted)">Strong understanding of layouts, flexbox, grid, and animations.</p>
+        </div>
+        <div class="card skill reveal delay-2"><b>JavaScript</b>
+          <div class="meter"><span data-val="90"></span></div>
+          <p style="color:var(--muted)">Building interactivity, DOM manipulation, and ES6+ features.</p>
+        </div>
+      </div>
+      <div class="center mt-2">
+        <a href="./skills.html" class="btn" style="margin-top: 20px;">Show More Skills</a>
+      </div>
+    </section>
+
+    <!-- ========== PROJECTS ========= -->
+    <section class="section container" id="projects">
+      <div class="center">
+        <h2 class="reveal">Projects</h2>
+        <p class="reveal delay-1" style="color:var(--muted)">
+          A few of my featured projects showcasing my skills and creativity in web development.
+        </p>
+      </div>
+
+      <div class="grid projects mt-2">
+        <article class="card project reveal">
+          <div class="thumb" style="background-image:url(./images/chatbot.jpg)"></div>
+          <span class="tag">UI</span> <span class="tag">HTML • CSS • JS</span>
+          <h3 class="m-0" style="margin-top:8px">Chatbot</h3>
+          <p class="mt-2" style="color:var(--muted)">A simple interactive chatbot built using HTML, CSS, and JavaScript
+            with smooth animations and clean design.</p>
+          <a class="btn mt-2" href="https://chatbot-rho-seven-18.vercel.app/" target="_blank">Veiw Demo</a>
+        </article>
+
+        <article class="card project reveal delay-1">
+          <div class="thumb" style="background-image:url(./images/calculator.jpg)"></div>
+          <span class="tag">UI</span> <span class="tag">HTML • CSS • JS</span>
+          <h3 class="m-0" style="margin-top:8px">Salary Calculator</h3>
+          <p class="mt-2" style="color:var(--muted)">A responsive calculator built with HTML, CSS, and JavaScript that
+            performs basic arithmetic operations with a simple, modern UI.</p>
+          <a class="btn mt-2" href="https://calculator-vert-chi-49.vercel.app/" target="_blank">Veiw Demo</a>
+        </article>
+
+        <article class="card project reveal delay-2">
+          <div class="thumb"
+            style="background-image:url('https://images.unsplash.com/photo-1504639725590-34d0984388bd?q=80&w=1200&auto=format&fit=crop')">
+          </div>
+          <span class="tag">UI</span> <span class="tag">HTML • CSS • JS</span>
+          <h3 class="m-0" style="margin-top:8px">Stop Watch</h3>
+          <p class="mt-2" style="color:var(--muted)">A sleek and accurate stopwatch made with HTML, CSS, and JavaScript,
+            featuring start, stop, and reset functionality with smooth transitions.</p>
+          <a class="btn mt-2" href="https://stop-watch-murex-tau.vercel.app/" target="_blank">Veiw Demo</a>
+        </article>
+      </div>
+
+      <div class="center mt-3">
+        <a class="btn" href="./projects.html" style="margin-top: 20px;">View All Projects</a>
+      </div>
+    </section>
+
+    <!-- ========== BLOG ========= -->
+    <section class="section container" id="blog">
+      <div class="center">
+        <h2 class="reveal">Blog</h2>
+        <p class="reveal delay-1" style="color:var(--muted)">Sharing my thoughts and experiences about web development,
+          design, and learning new skills.</p>
+      </div>
+
+      <div class="grid posts mt-2">
+        <article class="card reveal">
+          <h3 class="m-0" style="color: green;">Designing with Dev in Mind</h3>
+          <p class="mt-2" style="color:var(--muted)">As a frontend developer, I’ve learned that great design isn’t just
+            about colors and layouts — it’s about how easily a design can be turned into real, working code. I focus on
+            creating interfaces that are not only visually appealing but also developer-friendly. By using clean
+            structure, reusable components, and consistent styles, I make sure that the design and development process
+            stay smooth and efficient. This approach helps me build projects faster, with fewer issues, and a much
+            better user experience.
+          </p>
+        </article>
+        <article class="card reveal delay-1">
+          <h3 class="m-0" style="color: green;">Performance First</h3>
+          <p class="mt-2" style="color:var(--muted)">A great website isn’t just about design — it’s about speed,
+            responsiveness, and how quickly it connects with the user. I always focus on performance from the start,
+            using clean code, image optimization, and lazy loading to make pages load faster. By tracking what truly
+            matters — like loading time and smooth scrolling — I ensure that users get a seamless experience on every
+            device. A fast website not only feels better but also shows the effort behind every line of code.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- ========== CONTACT ========= -->
+    <section class="section container" id="contact">
+      <div class="contact__grid">
+        <div>
+          <h2 class="reveal">Let’s build something</h2>
+          <p class="reveal delay-1" style="color:var(--muted)">
+            Have an idea or opportunity? I’m open for collaborations and internships.
+          </p>
+
+          <div class="card reveal delay-2">
+            <h3 class="m-0">Reach me at</h3>
+            <p class="mt-2"><a class="btn" href="mailto:okashaahmedofficial@gmail.com">okashaahmedofficial@gmail.com</a>
+            </p>
+            <p class="mt-2" style="color:var(--muted)">
+              <a class="tag" href="https://github.com/okashadeveloper" target="_blank" title="GitHub">GitHub</a>
+              <a class="tag" href="https://www.linkedin.com/in/okasha-ahmed-066380366/" target="_blank"
+                title="LinkedIn">LinkedIn</a>
+            </p>
+          </div>
+        </div>
+
+        <form class="card reveal delay-1" onsubmit="event.preventDefault(); alert('Thanks, I will get back to you!');">
+          <h3 class="m-0">Quick message</h3>
+          <input class="input mt-2" type="text" placeholder="Your Name" required>
+          <input class="input mt-2" type="email" placeholder="Your Email" required>
+          <textarea class="textarea mt-2" placeholder="Message" required></textarea>
+          <button class="btn mt-2" type="submit">Send Message</button>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    © 2025 Okasha Ahmed — All rights reserved.
+  </footer>
+
+  <script src="./script.js"></script>
+</body>
+
+</html>
