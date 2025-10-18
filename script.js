@@ -1,11 +1,17 @@
 /* =========================
-   MOBILE MENU
+   MOBILE MENU (FIXED)
 ========================= */
 const burger = document.getElementById('burger');
-const menu = document.getElementById('menu');
+const menu = document.getElementById('menu') || document.querySelector('.nav__links'); 
+// Agar menu id nahi hai (like About.html), to .nav__links use kare
+
 if (burger && menu) {
-    burger.addEventListener('click', () => menu.classList.toggle('show'));
-    menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => menu.classList.remove('show')));
+    burger.addEventListener('click', () => {
+        menu.classList.toggle('show');
+    });
+    menu.querySelectorAll('a').forEach(a => {
+        a.addEventListener('click', () => menu.classList.remove('show'));
+    });
 }
 
 /* =========================
@@ -16,8 +22,10 @@ const links = document.querySelectorAll('[data-route]');
 
 function routeTo(hash) {
     if (!hash) return;
-    wipe.classList.remove('hide');
-    wipe.classList.add('show');
+    if (wipe) {
+        wipe.classList.remove('hide');
+        wipe.classList.add('show');
+    }
 
     setTimeout(() => {
         document.querySelectorAll('.nav__links a').forEach(a => a.classList.remove('active'));
@@ -25,26 +33,30 @@ function routeTo(hash) {
         if (match) match.classList.add('active');
         const targetEl = document.getElementById(hash);
         if (targetEl) targetEl.scrollIntoView({ behavior: 'instant', block: 'start' });
-        wipe.classList.remove('show');
-        wipe.classList.add('hide');
+        if (wipe) {
+            wipe.classList.remove('show');
+            wipe.classList.add('hide');
+        }
     }, 400);
 }
 
-links.forEach(a => {
-    a.addEventListener('click', e => {
-        const target = a.getAttribute('data-route');
-        if (target) {
-            e.preventDefault();
-            routeTo(target);
-            history.replaceState(null, '', `#${target}`);
-        }
+if (links.length > 0) {
+    links.forEach(a => {
+        a.addEventListener('click', e => {
+            const target = a.getAttribute('data-route');
+            if (target) {
+                e.preventDefault();
+                routeTo(target);
+                history.replaceState(null, '', `#${target}`);
+            }
+        });
     });
-});
+}
 
 window.addEventListener('load', () => {
     const initial = (location.hash || '#home').replace('#', '');
     routeTo(initial);
-    setTimeout(() => { wipe.classList.remove('hide'); }, 700);
+    setTimeout(() => { if (wipe) wipe.classList.remove('hide'); }, 700);
 });
 
 /* =========================
@@ -89,43 +101,45 @@ if (viewBtn) {
    BACKGROUND PARTICLES
 ========================= */
 const canvas = document.getElementById('stars');
-const ctx = canvas.getContext('2d');
-let w, h, stars;
+if (canvas) {
+    const ctx = canvas.getContext('2d');
+    let w, h, stars;
 
-function resize() {
-    w = canvas.width = innerWidth;
-    h = canvas.height = innerHeight;
-    stars = Array.from({ length: Math.min(160, Math.floor(w * h / 12000)) }).map(() => ({
-        x: Math.random() * w,
-        y: Math.random() * h,
-        z: Math.random() * 0.8 + 0.2,
-        vx: (Math.random() - 0.5) * 0.25,
-        vy: (Math.random() - 0.5) * 0.25
-    }));
-}
-
-function tick() {
-    ctx.clearRect(0, 0, w, h);
-    for (const s of stars) {
-        s.x += s.vx * s.z;
-        s.y += s.vy * s.z;
-        if (s.x < 0) s.x = w;
-        if (s.x > w) s.x = 0;
-        if (s.y < 0) s.y = h;
-        if (s.y > h) s.y = 0;
-
-        const r = 1.1 + s.z * 1.8;
-        ctx.beginPath();
-        const grd = ctx.createRadialGradient(s.x, s.y, 0, s.x, s.y, r * 3);
-        grd.addColorStop(0, 'rgba(0,229,255,.9)');
-        grd.addColorStop(1, 'rgba(122,92,255,0)');
-        ctx.fillStyle = grd;
-        ctx.arc(s.x, s.y, r, 0, Math.PI * 2);
-        ctx.fill();
+    function resize() {
+        w = canvas.width = innerWidth;
+        h = canvas.height = innerHeight;
+        stars = Array.from({ length: Math.min(160, Math.floor(w * h / 12000)) }).map(() => ({
+            x: Math.random() * w,
+            y: Math.random() * h,
+            z: Math.random() * 0.8 + 0.2,
+            vx: (Math.random() - 0.5) * 0.25,
+            vy: (Math.random() - 0.5) * 0.25
+        }));
     }
-    requestAnimationFrame(tick);
-}
 
-addEventListener('resize', resize);
-resize();
-tick();
+    function tick() {
+        ctx.clearRect(0, 0, w, h);
+        for (const s of stars) {
+            s.x += s.vx * s.z;
+            s.y += s.vy * s.z;
+            if (s.x < 0) s.x = w;
+            if (s.x > w) s.x = 0;
+            if (s.y < 0) s.y = h;
+            if (s.y > h) s.y = 0;
+
+            const r = 1.1 + s.z * 1.8;
+            ctx.beginPath();
+            const grd = ctx.createRadialGradient(s.x, s.y, 0, s.x, s.y, r * 3);
+            grd.addColorStop(0, 'rgba(0,229,255,.9)');
+            grd.addColorStop(1, 'rgba(122,92,255,0)');
+            ctx.fillStyle = grd;
+            ctx.arc(s.x, s.y, r, 0, Math.PI * 2);
+            ctx.fill();
+        }
+        requestAnimationFrame(tick);
+    }
+
+    addEventListener('resize', resize);
+    resize();
+    tick();
+}

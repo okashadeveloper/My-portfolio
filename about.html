@@ -13,15 +13,15 @@
   <canvas class="canvas-bg" id="stars"></canvas>
   <div class="wipe" id="wipe"></div>
 
-  <!-- NAV (matches look of index but uses normal links so script.js won't hijack navigation) -->
+  <!-- NAV -->
   <nav class="nav">
     <div class="nav__wrap">
       <a href="profile.html" class="logo">
         <span class="logo__round"><span class="logo__dot"></span></span>
-        Okasha <span style="color:var(--cyan)"> .dev</span>
+        Okasha <span style="color:var(--cyan)">.dev</span>
       </a>
 
-      <div class="nav__links">
+      <div class="nav__links" id="navLinks">
         <a href="index.html">Home</a>
         <a href="about.html" class="active">About</a>
         <a href="skills.html">Skills</a>
@@ -29,71 +29,133 @@
         <a href="blog.html">Blog</a>
         <a href="contact.html">Contact</a>
       </div>
+
       <button class="burger" id="burger">☰</button>
     </div>
   </nav>
 
   <main>
     <section class="section container" id="about">
-      <h2 class="reveal">About Me</h2>
-      <p class="reveal delay-1" style="color:var(--muted);max-width:900px">Karachi-based full stack developer. Strong
-        love for UI polish + backend pragmatism. SMIT grad-in-training; PECHS College student. I ship fast and iterate
-        with users.</p>
+      <h2 class="reveal center">About Me</h2>
+      <p class="reveal delay-1 center" style="color:var(--muted);max-width:900px;margin:auto">
+        Karachi-based full stack developer. Strong love for UI polish + backend pragmatism.
+        SMIT grad-in-training; PECHS College student. I ship fast and iterate with users.
+      </p>
 
-      <div class="grid" style="grid-template-columns:1.4fr .6fr;margin-top:22px">
+      <div class="grid about-grid" style="margin-top:30px">
         <div class="card reveal">
           <h3 class="m-0">My Journey</h3>
-          <p class="mt-2" style="color:var(--muted)">My journey into web development began with curiosity about how the
-            internet really works. While pursuing my First Year in Pre-Engineering at PECHS College, I wanted to do
-            something creative and technical at the same time — that’s when I discovered my passion for coding. To turn
-            that passion into skill, I joined SMIT (Saylani Mass IT Training Program), where I’m learning HTML, CSS, and
-            JavaScript, along with backend fundamentals. Each day, I’m growing as a developer — building projects,
-            improving my logic, and shaping my path toward becoming a full-stack web developer.</p>
+          <p class="mt-2" style="color:var(--muted)">
+            My journey into web development began with curiosity about how the internet really works.
+            While pursuing my First Year in Pre-Engineering at PECHS College, I wanted to do something creative and
+            technical at the same time — that’s when I discovered my passion for coding.
+            To turn that passion into skill, I joined SMIT (Saylani Mass IT Training Program), where I’m learning HTML,
+            CSS, and JavaScript, along with backend fundamentals.
+            Each day, I’m growing as a developer — building projects, improving my logic, and shaping my path toward
+            becoming a full-stack web developer.
+          </p>
 
           <h3 style="margin-top:18px">⚡ What I Enjoy Building</h3>
-
-          <p class="mt-2" style="color:var(--muted)">I love bringing ideas to life through clean, responsive, and fast
-            front-end experiences. I enjoy creating interactive designs that not only look good but also feel smooth to
-            use.
+          <p class="mt-2" style="color:var(--muted)">
+            I love bringing ideas to life through clean, responsive, and fast front-end experiences.
+            I enjoy creating interactive designs that not only look good but also feel smooth to use.
             On the backend side, I’m learning to build simple, secure, and maintainable APIs that connect everything
-            together. I also enjoy working on reusable components and mini design systems that make projects more
-            scalable and consistent.</p>
+            together.
+            I also enjoy working on reusable components and mini design systems that make projects more scalable and
+            consistent.
+          </p>
 
           <h3 style="margin-top:18px">💼 Available For</h3>
-          <p class="mt-2" style="color:var(--muted)">I’m currently open to collaborations, internships, and freelance
-            opportunities where I can apply my front-end and backend skills, learn from real-world projects, and
-            contribute to creative ideas.</p>
+          <p class="mt-2" style="color:var(--muted)">
+            I’m currently open to collaborations, internships, and freelance opportunities where I can apply my front-end
+            and backend skills, learn from real-world projects, and contribute to creative ideas.
+          </p>
         </div>
 
         <div class="card reveal delay-1">
           <h3 class="m-0">⚡ Quick Facts</h3>
-          <p class="mt-2" style="color:var(--muted)">I’m based in Karachi, Pakistan, where I balance my studies in
-            Pre-Engineering at PECHS College with my growing passion for web development. I enjoy creating smooth,
-            responsive websites that combine clean design and solid logic. Currently, I’m sharpening my frontend skills
-            in HTML, CSS, and JavaScript while learning backend development through SMIT. I love UI animations,
-            experimenting with new ideas, and constantly improving the way I write and organize code. Every project I
-            work on helps me grow and pushes me closer to becoming a full-stack developer.</p>
+          <p class="mt-2" style="color:var(--muted)">
+            I’m based in Karachi, Pakistan, where I balance my studies in Pre-Engineering at PECHS College with my
+            growing passion for web development.
+            I enjoy creating smooth, responsive websites that combine clean design and solid logic.
+            Currently, I’m sharpening my frontend skills in HTML, CSS, and JavaScript while learning backend development
+            through SMIT.
+            I love UI animations, experimenting with new ideas, and constantly improving the way I write and organize
+            code.
+            Every project I work on helps me grow and pushes me closer to becoming a full-stack developer.
+          </p>
 
           <h3 style="margin-top:12px">Contact</h3>
-         <p class="mt-2"><a class="btn" href="mailto:okashaahmedofficial@gmail.com">okashaahmedofficial@gmail.com</a></p>
-
+          <p class="mt-2"><a class="btn" href="mailto:okashaahmedofficial@gmail.com">okashaahmedofficial@gmail.com</a></p>
         </div>
       </div>
 
-      <section style="margin-top:28px">
-        <h3 class="reveal">⚙️ Principles</h3>
+      <section style="margin-top:40px">
+        <h3 class="reveal center">⚙️ Principles</h3>
         <div class="grid mt-2" style="grid-template-columns:repeat(3,1fr)">
-          <div class="card reveal">Clean & Organized Code — I believe in writing simple, readable, and well-structured code for every project.</div>
-          <div class="card reveal delay-1">Performance & Accessibility — Fast, responsive, and usable websites for everyone, on any device.</div>
-          <div class="card reveal delay-2">Continuous Learning — Every project is a chance to learn, improve, and explore new technologies.</div>
+          <div class="card reveal">Clean & Organized Code — I believe in writing simple, readable, and well-structured
+            code for every project.</div>
+          <div class="card reveal delay-1">Performance & Accessibility — Fast, responsive, and usable websites for
+            everyone, on any device.</div>
+          <div class="card reveal delay-2">Continuous Learning — Every project is a chance to learn, improve, and
+            explore new technologies.</div>
         </div>
       </section>
-
     </section>
   </main>
 
   <footer>© 2025 Okasha Ahmed — All rights reserved.</footer>
+
+  <!-- Internal Responsive Fix -->
+  <style>
+    @media (max-width: 980px) {
+      #about p {
+        text-align: center !important;
+      }
+
+      .about-grid {
+        grid-template-columns: 1fr !important;
+        gap: 28px;
+      }
+
+      .about-grid .card {
+        text-align: center;
+      }
+
+      section h3 {
+        text-align: center;
+      }
+
+      .grid[style*="repeat(3,1fr)"] {
+        grid-template-columns: 1fr !important;
+      }
+
+      .section {
+        padding: 90px 0 70px !important;
+      }
+    }
+
+    @media (max-width: 750px) {
+      h2 {
+        font-size: 28px !important;
+      }
+
+      p {
+        font-size: 16px !important;
+      }
+
+      .card {
+        padding: 18px !important;
+      }
+
+      .grid {
+        gap: 18px !important;
+      }
+    }
+  </style>
+
+  <!-- Burger Menu Script -->
+  
   <script src="./script.js"></script>
 </body>
-
 </html>
